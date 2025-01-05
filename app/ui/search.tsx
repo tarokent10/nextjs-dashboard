@@ -5,7 +5,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 
 export default function Search({ placeholder }: { placeholder: string }) {
-  console.log('render'); // use client を付与しても初期ロード時はサーバーサイドでレンダリングされる？
+  console.log('render search'); // use client を付与しても初期ロード時はサーバーサイドでレンダリングされる？
   const searchParam = useSearchParams();
   const pathname = usePathname();
   const {replace} = useRouter();
